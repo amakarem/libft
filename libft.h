@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:51:31 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 18:46:10 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:35:08 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ int		ft_isalnum(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	ft_putchar(char c);
-void	ft_putstr(char *s);
+void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
-size_t	ft_strlen(char *s);
-char	*ft_strchr(char *str, int c);
+size_t 	ft_strlen(const char *str);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strrchr(const char *str, int c);

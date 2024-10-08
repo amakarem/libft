@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:50:10 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 19:09:11 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:39:05 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,11 @@ int	main(void)
 	   ft_putnbr(sh - charstr + 1);
        sh = ft_strchr(sh + 1, 's');
    }
+	ft_putstr("\n\n");
+	char* ptr = ft_strrchr(charstr, 's');
+	ft_putstr(ptr);
+	ft_putstr("\nFound at position:");
+	ft_putnbr(charstr - ptr  + 1);
 
 	return (0);
 }
