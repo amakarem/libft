@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:35:18 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 19:30:24 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:51:35 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ char	*ft_strchr(const char *str, int c)
 		}
 		str++;
 	}
-	return ((char *)NULL);
+	return ((char *) NULL);
 }
