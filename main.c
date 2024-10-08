@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:50:10 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 17:19:11 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/08 17:45:16 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,8 @@ int	main(void)
 	l = ft_toupper(l);
 	ft_putchar(l);
 	ft_putchar('\n');
+	ft_putnbr(ft_isalnum('*'));
+	ft_putchar('\n');
+	ft_putnbr(ft_isalnum(l));
 	return (0);
 }
