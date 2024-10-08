@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:50:10 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 17:52:54 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/08 19:09:11 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,17 @@ int	main(void)
 	ft_putnbr(ft_isascii('\0'));
 	ft_putchar('\n');
 	ft_putnbr(ft_isprint('\0'));
+   	char charstr[] = "This is simple string";
+   	char* sh;
+	
+	sh = ft_strchr(charstr, 's');
+
+   while (sh != NULL) 
+   {
+       ft_putstr("\nFound at position:");
+	   ft_putnbr(sh - charstr + 1);
+       sh = ft_strchr(sh + 1, 's');
+   }
+
 	return (0);
 }
