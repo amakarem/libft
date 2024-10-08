@@ -6,10 +6,11 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:50:10 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 20:49:42 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/08 21:09:02 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <string.h>
 #include "libft.h"
 
@@ -83,5 +84,22 @@ char str1[15];
       ft_putstr("\nstr1 is equal to str2");
    }
    
+
+
+      char nstr[50];
+
+   strcpy(nstr, "Welcome to Tutorialspoint");
+   puts(nstr);
+
+   ft_memset(nstr, '#', 7);
+   puts(nstr);
+
+   int arr[10];
+   ft_memset(arr, 0, sizeof(arr));
+
+   printf("Array after memset(): ");
+   for (int i = 0; i < 10; i++) {
+       printf("%d ", arr[i]);
+   }
 	return (0);
 }
