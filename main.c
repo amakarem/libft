@@ -6,10 +6,11 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:50:10 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 19:39:05 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/08 20:49:42 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include "libft.h"
 
 int	main(void)
@@ -62,5 +63,25 @@ int	main(void)
 	ft_putstr("\nFound at position:");
 	ft_putnbr(charstr - ptr  + 1);
 
+char str1[15];
+   char str2[15];
+   int ret;
+   strcpy(str1, "abcdef");
+   strcpy(str2, "abcdEF");
+
+   ret = ft_strncmp(str1, str2, 4);
+   if(ret < 0) 
+   {
+      ft_putstr("\nstr1 is less than str2");
+   } 
+   else if(ret > 0) 
+   {
+      ft_putstr("\nstr2 is less than str1");
+   } 
+   else 
+   {
+      ft_putstr("\nstr1 is equal to str2");
+   }
+   
 	return (0);
 }
