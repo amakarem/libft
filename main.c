@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:50:10 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/09 15:46:56 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/09 16:10:18 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,11 @@ char str1[15];
     char dest[] = "ahmed elaaser";
     ft_strlcpy(dest, src, 10);
     printf("\n%s", dest);
+
+	char first[] = "This is ";
+    char last[] = "a potentially long string";
+	ft_strlcat(first, last, 16);
+	printf("\n%s", first);
 
 	return (0);
 }
