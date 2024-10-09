@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:50:10 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 21:09:02 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:46:56 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,11 @@ char str1[15];
    for (int i = 0; i < 10; i++) {
        printf("%d ", arr[i]);
    }
+
+       char src[] = "Amina";
+    char dest[] = "ahmed elaaser";
+    ft_strlcpy(dest, src, 10);
+    printf("\n%s", dest);
+
 	return (0);
 }
