@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 17:31:03 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/10 22:18:09 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/10 22:48:39 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void	ft_bzero(void *str, size_t n)
 		ptr[i] = 0;
 		i++;
 	}
-	//return ((void *) ptr);
 }
