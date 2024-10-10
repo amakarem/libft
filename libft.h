@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:51:31 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/09 16:09:39 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/10 17:40:57 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,4 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n);
 void	*ft_memset(void *str, int c, size_t n);
 size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+void	*ft_bzero(void *str, size_t n);
