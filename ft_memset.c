@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:56:19 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/08 21:08:01 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/10 22:07:00 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memset(void *str, int c, size_t n)
 		ptr[i] = (unsigned char)c;
 		i++;
 	}
-	return (NULL);
+	return ((void *) ptr);
 }
