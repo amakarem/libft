@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 00:23:16 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/14 06:23:59 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/14 06:34:51 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ char	**ft_free_ar(char	**arr)
 	return (NULL);
 }
 
-int	ft_get_keys(char const *s, char c)
+size_t	ft_get_keys(char const *s, char c)
 {
-	int	keys;
+	size_t	keys;
 
-	if (!*s || !c)
+	if (!s || !*s || !c)
 		return (0);
 	keys = 0;
 	while (*s)
@@ -46,7 +46,7 @@ int	ft_get_keys(char const *s, char c)
 
 char	**ft_set_arr(char const *s, char c)
 {
-	int		key;
+	size_t	key;
 	char	**arr;
 
 	key = ft_get_keys(s, c);
