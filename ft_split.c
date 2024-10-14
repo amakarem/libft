@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 00:23:16 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/14 03:52:03 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/14 06:16:43 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,16 @@ char	**ft_free_ar(char	**arr)
 
 int	ft_get_keys(char const *s, char c)
 {
-	int	i;
 	int	keys;
 
-	if (!s || c == '\0' || ft_strlen(s) == 0)
+	if (!*s || !c)
 		return (0);
 	keys = 0;
-	i = 0;
-	while (s[i] != '\0')
+	while (*s)
 	{
-		if (s[i] == c || s[i + 1] == '\0')
+		if (*s == c || !*s + 1)
 			keys++;
-		i++;
+		s++;
 	}
 	return (keys);
 }
@@ -62,32 +60,28 @@ char	**ft_set_arr(char const *s, char c)
 
 char	**ft_split_write(char const *s, char c, char **arr)
 {
-	int		i;
 	int		key;
-	size_t	start;
 	size_t	strlen;
 
-	i = 0;
 	key = 0;
-	start = 0;
 	strlen = 0;
-	while (s[i] != '\0')
+	while (*s)
 	{
-		if (s[i] != c)
+		if (*s == c && *s)
+			s++;
+		if(*s)
 		{
-			if (strlen == 0)
-				start = i;
-			strlen++;
+			if (*s != c) {
+				if(!ft_strchr(s, c))
+					strlen = ft_strlen(s);
+				else
+					strlen = ft_strchr(s, c) - s;
+				arr[key++] = ft_substr(s, 0, strlen);
+				s = s + strlen;
+			}
+			else
+				s++;
 		}
-		if ((s[i] == c || s[i + 1] == '\0') && strlen > 0)
-		{
-			arr[key] = ft_substr(s, start, strlen);
-			if (arr[key] == NULL)
-				return (ft_free_ar(arr));
-			strlen = 0;
-			key++;
-		}
-		i++;
 	}
 	arr[key] = NULL;
 	return (arr);
