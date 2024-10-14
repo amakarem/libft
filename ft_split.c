@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 00:23:16 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/14 06:16:43 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/14 06:23:59 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,18 +69,17 @@ char	**ft_split_write(char const *s, char c, char **arr)
 	{
 		if (*s == c && *s)
 			s++;
-		if(*s)
+		if (*s && *s != c)
 		{
-			if (*s != c) {
-				if(!ft_strchr(s, c))
-					strlen = ft_strlen(s);
-				else
-					strlen = ft_strchr(s, c) - s;
-				arr[key++] = ft_substr(s, 0, strlen);
-				s = s + strlen;
-			}
+			if (!ft_strchr(s, c))
+				strlen = ft_strlen(s);
 			else
-				s++;
+				strlen = ft_strchr(s, c) - s;
+			arr[key] = ft_substr(s, 0, strlen);
+			if (arr[key] == NULL)
+				return (ft_free_ar(arr));
+			key++;
+			s = s + strlen;
 		}
 	}
 	arr[key] = NULL;
