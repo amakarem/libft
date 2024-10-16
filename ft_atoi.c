@@ -6,20 +6,20 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 21:27:59 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/11 23:06:16 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:22:50 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	if ((c >= 9 && c <= 13) || c == 32)
 		return (1);
 	return (0);
 }
 
-int	ft_return_max(int flag)
+static int	ft_return_max(int flag)
 {
 	if (flag == 1)
 		return (2147483647);

@@ -6,13 +6,13 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:12:07 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/16 18:19:26 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:23:28 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbrlen(int n)
+static int	ft_nbrlen(int n)
 {
 	int		i;
 
@@ -36,7 +36,7 @@ int	ft_nbrlen(int n)
 	return (i);
 }
 
-int	ft_maxnegative(int n)
+static int	ft_maxnegative(int n)
 {
 	if (n < 0)
 	{
@@ -48,7 +48,7 @@ int	ft_maxnegative(int n)
 	return (n);
 }
 
-char	*ft_revnbr(char *rev, int n)
+static char	*ft_revnbr(char *rev, int n)
 {
 	int		negative;
 	int		i;
@@ -75,7 +75,7 @@ char	*ft_revnbr(char *rev, int n)
 	return (rev);
 }
 
-char	*ft_revstr(char *s)
+static char	*ft_revstr(char *s)
 {
 	char	*tmp;
 	int		len;

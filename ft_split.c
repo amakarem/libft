@@ -6,13 +6,13 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 00:23:16 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/16 14:53:18 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/16 18:24:01 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_free_ar(char	**arr)
+static char	**ft_free_ar(char	**arr)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ char	**ft_free_ar(char	**arr)
 	return (NULL);
 }
 
-size_t	ft_get_keys(char const *s, char c)
+static size_t	ft_get_keys(char const *s, char c)
 {
 	size_t	keys;
 
@@ -47,7 +47,7 @@ size_t	ft_get_keys(char const *s, char c)
 	return (keys);
 }
 
-char	**ft_set_arr(char const *s, char c)
+static char	**ft_set_arr(char const *s, char c)
 {
 	char	**arr;
 
@@ -59,7 +59,7 @@ char	**ft_set_arr(char const *s, char c)
 	return (arr);
 }
 
-char	**ft_split_write(char const *s, char c, char **arr)
+static char	**ft_split_write(char const *s, char c, char **arr)
 {
 	int		key;
 	size_t	w_len;
