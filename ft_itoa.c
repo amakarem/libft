@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 16:12:07 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/16 18:23:28 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/16 23:13:04 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,13 +93,13 @@ static char	*ft_revstr(char *s)
 		i++;
 	}
 	tmp[i] = '\0';
-	free(s);
 	return (tmp);
 }
 
 char	*ft_itoa(int n)
 {
 	char	*str;
+	char	*rev;
 
 	str = malloc(sizeof(char) * (ft_nbrlen(n) + 1));
 	if (str == NULL)
@@ -112,7 +112,8 @@ char	*ft_itoa(int n)
 		str[1] = '\0';
 		return (str);
 	}
-	str = ft_revnbr(str, n);
-	str = ft_revstr(str);
+	rev = ft_revnbr(str, n);
+	str = ft_revstr(rev);
+	free(rev);
 	return (str);
 }
