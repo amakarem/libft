@@ -6,16 +6,16 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 21:18:51 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/16 21:28:34 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/16 21:43:22 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	t_list	*temp;
-	int	i;
+	int		i;
 
 	temp = lst;
 	i = 0;
