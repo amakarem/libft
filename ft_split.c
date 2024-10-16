@@ -6,7 +6,7 @@
 /*   By: aelaaser <aelaaser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 00:23:16 by aelaaser          #+#    #+#             */
-/*   Updated: 2024/10/14 06:34:51 by aelaaser         ###   ########.fr       */
+/*   Updated: 2024/10/16 14:53:18 by aelaaser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,27 +32,28 @@ size_t	ft_get_keys(char const *s, char c)
 {
 	size_t	keys;
 
-	if (!s || !*s || !c)
+	if (!*s)
 		return (0);
 	keys = 0;
 	while (*s)
 	{
-		if (*s == c || !*s + 1)
+		while (*s == c)
+			s++;
+		if (*s)
 			keys++;
-		s++;
+		while (*s != c && *s)
+			s++;
 	}
 	return (keys);
 }
 
 char	**ft_set_arr(char const *s, char c)
 {
-	size_t	key;
 	char	**arr;
 
-	key = ft_get_keys(s, c);
-	if (key == 0)
+	if (!s)
 		return (NULL);
-	arr = malloc(sizeof(char *) * (key + 1));
+	arr = (char **)malloc((ft_get_keys(s, c) + 1) * sizeof(char *));
 	if (arr == NULL)
 		return (NULL);
 	return (arr);
@@ -61,25 +62,24 @@ char	**ft_set_arr(char const *s, char c)
 char	**ft_split_write(char const *s, char c, char **arr)
 {
 	int		key;
-	size_t	strlen;
+	size_t	w_len;
 
 	key = 0;
-	strlen = 0;
 	while (*s)
 	{
-		if (*s == c && *s)
+		while (*s == c && *s)
 			s++;
-		if (*s && *s != c)
+		if (*s)
 		{
 			if (!ft_strchr(s, c))
-				strlen = ft_strlen(s);
+				w_len = ft_strlen(s);
 			else
-				strlen = ft_strchr(s, c) - s;
-			arr[key] = ft_substr(s, 0, strlen);
+				w_len = ft_strchr(s, c) - s;
+			arr[key] = ft_substr(s, 0, w_len);
 			if (arr[key] == NULL)
 				return (ft_free_ar(arr));
 			key++;
-			s = s + strlen;
+			s += w_len;
 		}
 	}
 	arr[key] = NULL;
